@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-service
+spec:
+  selector:
+    app:  myapp
+  type:  NodePort
+  ports:
+  - name: simpleport
+    port:  80
+    targetPort: 80
+    nodePort: 30008
